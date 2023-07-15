@@ -9,7 +9,7 @@ const server = http.createServer((req, res) => {
       const str = Buffer.from(chunk).toString();
       chunks.push(str);
       const obj = JSON.parse(chunks)
-      const value = obj.num;
+      const value = obj.num1;
     
      // Write the code here to check if the number is odd or even
      if(value%2==0){
