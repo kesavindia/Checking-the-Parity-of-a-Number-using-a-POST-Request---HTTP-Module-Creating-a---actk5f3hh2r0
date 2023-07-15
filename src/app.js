@@ -5,8 +5,8 @@ const server = http.createServer((req, res) => {
     const chunks = [];
 
     req.on('data', chunk => {
-      const buf = Buffer.from(chunk);
-      const str = buf.toString();
+       
+      const str = Buffer.from(chunk).toString();
       chunks.push(str);
       const obj = JSON.parse(chunks)
       const value = obj.num1;
@@ -23,10 +23,6 @@ const server = http.createServer((req, res) => {
       res.end(`This is not a number`);
          }
    });
-  }
-
-  
+  }  
 });
-
-
 module.exports = server;
